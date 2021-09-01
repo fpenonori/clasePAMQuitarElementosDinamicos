@@ -30,7 +30,7 @@ export default class App extends Component {
   }
 
   render(){
-    const listado = this.state.valores.map( item => <MyComponent person={item} onDelete={this.eliminarPersona.bind(this)}/>);
+    const listado = this.state.valores.map( item => <MyComponent key={item.DNI} person={item} onDelete={this.eliminarPersona.bind(this)}/>);
     return (
       <View>
         <View style={{height:100}}/>
